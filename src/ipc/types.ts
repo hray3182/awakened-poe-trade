@@ -32,8 +32,10 @@ export interface Config {
   hardwareAcceleration: boolean
   accountName: string
   stashScroll: boolean
-  language: 'en' | 'ru'
-  widgets: widget.Widget[]
+
+  language: 'en' | 'ru' | 'zh_TW'
+  widgets: Widget[]
+
   fontSize: number
   disableUpdateDownload: boolean
 }
@@ -81,7 +83,7 @@ export const defaultConfig = (): Config => ({
   hardwareAcceleration: false,
   accountName: '',
   stashScroll: true,
-  language: 'en',
+  language: 'zh_TW',
   fontSize: 16,
   disableUpdateDownload: false,
   widgets: [
