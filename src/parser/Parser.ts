@@ -571,7 +571,6 @@ function parseModifiers (section: string[], item: ParsedItem) {
       const { modType, lines } = parseModType(statLines)
       const modInfo = parseModInfoLine(modLine, modType)
       parseStatsFromMod(lines, item, { info: modInfo, stats: [] })
-
       if (modType === ModifierType.Veiled) {
         item.isVeiled = true
       }
