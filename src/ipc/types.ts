@@ -34,7 +34,7 @@ export interface Config {
   stashScroll: boolean
 
   language: 'en' | 'ru' | 'zh_TW'
-  widgets: Widget[]
+  widgets: widget.Widget[]
 
   fontSize: number
   disableUpdateDownload: boolean
