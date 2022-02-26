@@ -11,8 +11,7 @@
         :item-img="item.info.icon"
       >
         <template #item v-if="isValuableBasetype">
-          <button class="text-gray-400 hover:bg-gray-700 rounded px-1 -mx-1"
-            @click="$emit('filter-item-base')">{{ t('Base item') }}</button>
+          <span class="text-gray-400">{{ t('Base item') }}</span>
         </template>
       </item-quick-price>
       <div v-if="trend.changeStr" class="px-2 text-center">
@@ -59,6 +58,8 @@ import { ParsedItem } from '@/parser'
 import { artificialSlowdown } from '../trade/artificial-slowdown'
 import { ItemFilters } from '../filters/interfaces'
 
+const slowdown = artificialSlowdown(800)
+
 export default defineComponent({
   components: {
     ItemQuickPrice,
@@ -75,10 +76,9 @@ export default defineComponent({
     }
   },
   setup (props) {
-    const slowdown = artificialSlowdown(800)
     watch(() => props.item, (item) => {
       slowdown.reset(item)
-    })
+    }, { immediate: true })
 
     const trend = computed(() => {
       const detailsId = getDetailsId(props.item)
