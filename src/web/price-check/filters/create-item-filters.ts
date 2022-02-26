@@ -139,7 +139,7 @@ export function createFilters (
   } else if (item.rarity === ItemRarity.Unique && item.info.unique) {
     filters.searchExact = {
       name: item.info.refName,
-      baseType: ITEM_BY_REF('ITEM', item.info.unique.base)![0].name
+      baseType: ITEM_BY_REF('ITEM', item.info.unique.base)![0].refName
     }
   } else {
     filters.searchExact = {
