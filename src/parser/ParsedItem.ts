@@ -47,7 +47,9 @@ export interface ParsedItem {
   isCorrupted: boolean
   isMirrored?: boolean
   influences: ItemInfluence[]
+  logbookAreaMods?: ParsedModifier[][]
   isSynthesised?: boolean
+  isFractured?: boolean
   isVeiled?: boolean
   statsByType: StatCalculated[]
   newMods: ParsedModifier[]

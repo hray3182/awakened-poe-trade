@@ -306,6 +306,9 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
 
   if (filters.itemLevel && !filters.itemLevel.disabled) {
     prop.set(query.filters, 'misc_filters.filters.ilvl.min', filters.itemLevel.value)
+    if (filters.itemLevel.max) {
+      prop.set(query.filters, 'misc_filters.filters.ilvl.max', filters.itemLevel.max)
+    }
   }
 
   if (filters.stackSize && !filters.stackSize.disabled) {
@@ -578,7 +581,7 @@ function tradeIdToQuery (id: string, stat: StatFilter) {
     value: {
       ...getMinMax(stat.roll),
       option: stat.option != null
-        ? (stat.option.tradeValue === 'str' ? String : Number)(stat.option.value)
+        ? stat.option.value
         : undefined
     },
     disabled: stat.disabled

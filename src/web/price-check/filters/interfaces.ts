@@ -1,7 +1,12 @@
 import type { ItemInfluence, ItemCategory } from '@/parser'
 import type { StatCalculated } from '@/parser/modifiers'
 import type { ParsedItem } from '@/parser/ParsedItem'
-import type { Stat } from '@/assets/data'
+
+export interface FilterPreset {
+  id: 'Pseudo' | 'Base' | string
+  filters: ItemFilters
+  stats: StatFilter[]
+}
 
 interface SearchFilter {
   name?: string
@@ -66,6 +71,7 @@ export interface ItemFilters {
 
 export interface FilterNumeric {
   value: number
+  max?: number | undefined
   disabled: boolean
 }
 
@@ -87,7 +93,6 @@ export interface StatFilter {
   }
   option?: {
     value: number // NOTE: mutable in UI
-    tradeValue: NonNullable<Stat['trade']['option']>
   }
   hidden?: string
   disabled: boolean // NOTE: mutable in UI

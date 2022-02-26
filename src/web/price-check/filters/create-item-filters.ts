@@ -1,5 +1,5 @@
 import type { ItemFilters } from './interfaces'
-import { ParsedItem, ItemCategory, ItemRarity } from '@/parser'
+import { ParsedItem, ItemCategory, ItemRarity, ItemInfluence } from '@/parser'
 import { tradeTag, PERMANENT_LEAGUES } from '../trade/common'
 import { ModifierType } from '@/parser/modifiers'
 import { ITEM_BY_REF } from '@/assets/data'
@@ -14,6 +14,7 @@ export function createFilters (
     chaosPriceThreshold: number
     collapseListings: 'app' | 'api'
     activateStockFilter: boolean
+    exact: boolean
   }
 ): ItemFilters {
   const filters: ItemFilters = {
@@ -101,6 +102,14 @@ export function createFilters (
       value: item.mapTier!,
       disabled: false
     }
+  } else if (item.info.refName === 'Expedition Logbook') {
+    filters.searchExact = {
+      baseType: item.info.name
+    }
+    filters.areaLevel = {
+      value: floorToBracket(item.areaLevel!, [1, 68, 73, 78, 81]),
+      disabled: false
+    }
   } else if (item.category === ItemCategory.HeistContract) {
     filters.searchExact = {
       baseType: item.info.refName
@@ -148,7 +157,7 @@ export function createFilters (
     if (item.category && CATEGORY_TO_TRADE_ID.has(item.category)) {
       filters.searchRelaxed = {
         category: item.category,
-        disabled: (item.rarity !== ItemRarity.Rare)
+        disabled: opts.exact
       }
     }
   }
@@ -192,11 +201,21 @@ export function createFilters (
     filters.mirrored = { disabled: false }
   }
 
-  if (item.influences.length) {
-    filters.influences = item.influences.map(influecne => ({
-      value: influecne,
-      disabled: true
-    }))
+  if (item.influences.length && item.influences.length <= 2) {
+    if (opts.exact) {
+      filters.influences = item.influences.map(influecne => ({
+        value: influecne,
+        disabled: false
+      }))
+    } else if (item.influences.length === 1 && (
+      item.influences[0] === ItemInfluence.Shaper ||
+      item.influences[0] === ItemInfluence.Elder
+    )) {
+      filters.influences = [{
+        value: item.influences[0],
+        disabled: true
+      }]
+    }
   }
 
   if (item.itemLevel) {
@@ -205,28 +224,20 @@ export function createFilters (
       item.category !== ItemCategory.Map &&
       item.category !== ItemCategory.Jewel && /* https://pathofexile.gamepedia.com/Jewel#Affixes */
       item.category !== ItemCategory.HeistBlueprint &&
-      item.category !== ItemCategory.HeistContract
+      item.category !== ItemCategory.HeistContract &&
+      item.info.refName !== 'Expedition Logbook'
     ) {
-      if (item.itemLevel > 86) {
+      if (item.category === ItemCategory.ClusterJewel) {
         filters.itemLevel = {
-          value: 86,
-          disabled: true
+          value: floorToBracket(item.itemLevel, [1, 50, 68, 75, 84]),
+          max: ceilToBracket(item.itemLevel, [100, 74, 67, 49]),
+          disabled: !opts.exact
         }
-        // @TODO limit by item type
-        // If (RegExMatch(subtype, "i)Helmet|Gloves|Boots|Body Armour|Shield|Quiver")) {
-        //   Return (iLvl >= 84) ? 84 : false
-        // }
-        // Else If (RegExMatch(subtype, "i)Weapon")) {
-        //   Return (iLvl >= 83) ? 83 : false
-        // }
-        // Else If (RegExMatch(subtype, "i)Belt|Amulet|Ring")) {
-        //   Return (iLvl >= 83) ? 83 : false
-        // }
-        // Return false
       } else {
+        // TODO limit level by item type
         filters.itemLevel = {
-          value: item.itemLevel,
-          disabled: true
+          value: Math.min(item.itemLevel, 86),
+          disabled: !opts.exact
         }
       }
     }
@@ -261,18 +272,6 @@ export function createFilters (
     filters.unidentified = {
       value: true,
       disabled: (item.rarity !== ItemRarity.Unique)
-    }
-
-    if (item.rarity !== ItemRarity.Unique) {
-      if (filters.itemLevel) {
-        filters.itemLevel.disabled = false
-      }
-      if (filters.influences) {
-        filters.influences[0].disabled = false
-      }
-      if (filters.searchRelaxed) {
-        filters.searchRelaxed.disabled = true
-      }
     }
   }
 
@@ -334,6 +333,18 @@ function floorToBracket (value: number, brackets: readonly number[]) {
   let prev = brackets[0]
   for (const num of brackets) {
     if (num > value) {
+      return prev
+    } else {
+      prev = num
+    }
+  }
+  return prev
+}
+
+function ceilToBracket (value: number, brackets: readonly number[]) {
+  let prev = brackets[0]
+  for (const num of brackets) {
+    if (num < value) {
       return prev
     } else {
       prev = num
