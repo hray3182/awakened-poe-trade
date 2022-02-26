@@ -1829,9 +1829,15 @@
 {"ref":"+# to Accuracy Rating per Frenzy Charge","better":1,"matchers":[{"string":"每顆狂怒球 # 命中值"}],"trade":{"ids":{"implicit":["implicit.stat_3126680545"]}}}
 {"ref":"+# to Accuracy Rating while at Maximum Frenzy Charges","better":1,"matchers":[{"string":"獲得最大狂怒球時 # 命中值"}],"trade":{"ids":{"explicit":["explicit.stat_3213407110"]}}}
 {"ref":"+# to Agility Level for Heists","better":1,"matchers":[{"string":"為劫盜 +# 靈巧等級"}],"trade":{"ids":{"explicit":["explicit.stat_2943725337"]}}}
+<<<<<<< HEAD
 {"ref":"+# to all Attributes","better":1,"matchers":[{"string":"# 全能力"}],"trade":{"ids":{"explicit":["explicit.stat_1379411836"],"implicit":["implicit.stat_1379411836"],"fractured":["fractured.stat_1379411836"],"crafted":["crafted.stat_1379411836"]}}}
 {"ref":"+# to Armour","better":1,"matchers":[{"string":"# 點護甲 (部分)"}],"trade":{"ids":{"explicit":["explicit.stat_3484657501","explicit.stat_809229260"],"implicit":["implicit.stat_3484657501"],"fractured":["fractured.stat_3484657501","fractured.stat_809229260"],"scourge":["scourge.stat_3484657501"],"crafted":["crafted.stat_3484657501","crafted.stat_809229260"]}}}
 {"ref":"+# to Armour and Evasion Rating","better":1,"matchers":[{"string":"# 護甲和閃避值"}],"trade":{"ids":{"explicit":["explicit.stat_2316658489"],"implicit":["implicit.stat_2316658489"],"fractured":["fractured.stat_2316658489"],"crafted":["crafted.stat_2316658489"]}}}
+=======
+{"ref":"+# to all Attributes","better":1,"matchers":[{"string":"# 全能力"},{"string":"# 全能力"},{"string":"# 全能力"},{"string":"# 全能力"}],"trade":{"ids":{"explicit":["explicit.stat_1379411836"],"implicit":["implicit.stat_1379411836"],"fractured":["fractured.stat_1379411836"],"crafted":["crafted.stat_1379411836"]}}}
+{"ref":"+# to Armour","better":1,"matchers":[{"string":"# 點護甲"},{"string":"# 點護甲"},{"string":"# 點護甲"},{"string":"# 點護甲"},{"string":"# 點護甲"}],"trade":{"ids":{"explicit":["explicit.stat_3484657501","explicit.stat_809229260"],"implicit":["implicit.stat_3484657501"],"fractured":["fractured.stat_3484657501","fractured.stat_809229260"],"scourge":["scourge.stat_3484657501"],"crafted":["crafted.stat_3484657501","crafted.stat_809229260"]}}}
+{"ref":"+# to Armour and Evasion Rating","better":1,"matchers":[{"string":"# 護甲和閃避值"},{"string":"# 護甲和閃避值"},{"string":"# to Armour and Evasion Rating"},{"string":"# 護甲和閃避值"}],"trade":{"ids":{"explicit":["explicit.stat_2316658489"],"implicit":["implicit.stat_2316658489"],"fractured":["fractured.stat_2316658489"],"crafted":["crafted.stat_2316658489"]}}}
+>>>>>>> 246dc4e56797184ae6df7b45aed734f9b07b9a1f
 {"ref":"+# to Armour and Evasion Rating while Fortified","better":1,"matchers":[{"string":"護體時 # 護甲和閃避值"}],"trade":{"ids":{"implicit":["implicit.stat_2962782530"]}}}
 {"ref":"+# to Armour during Soul Gain Prevention","better":1,"matchers":[{"string":"停止獲得靈魂期間內 # 護甲"}],"trade":{"ids":{"explicit":["explicit.stat_1539825365"],"crafted":["crafted.stat_1539825365"]}}}
 {"ref":"+# to Armour if you've Hit an Enemy Recently","better":1,"matchers":[{"string":"若你近期有擊中敵人，# 護甲"}],"trade":{"ids":{"explicit":["explicit.stat_2368149582"]}}}
