@@ -97,4 +97,7 @@ export const LANGUAGE_DETECTOR = [{
 }, {
   lang: 'zh_TW',
   firstLine: '物品種類: '
+}, {
+  lang: 'zh_TW_GGC',
+  firstLine: '物品種類: '
 }]
