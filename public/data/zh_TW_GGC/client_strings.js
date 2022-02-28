@@ -38,7 +38,7 @@ export default {
   INFLUENCE_REDEEMER: '救贖者物品',
   INFLUENCE_WARLORD: '總督軍物品',
   SECTION_SYNTHESISED: '追憶之物',
-  ITEM_SYNTHESISED: /^Synthesised (.*)$/,
+  ITEM_SYNTHESISED: /^追憶之 (.*)$/,
   VEILED_PREFIX: '隱匿前綴',
   VEILED_SUFFIX: '隱匿後綴',
   FLASK_CHARGES: /^目前有 \d+ 充能次數$/,

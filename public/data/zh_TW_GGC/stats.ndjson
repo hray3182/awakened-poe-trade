@@ -45,7 +45,7 @@
 {"ref":"# Intelligence per 1 Intelligence on Allocated Passives in Radius","better":1,"matchers":[{"string":"範圍內每 1 點配置智慧為 # 智慧"}],"trade":{"ids":{"explicit":["explicit.stat_1070347065"]}}}
 {"ref":"# Life gained for each Cursed Enemy hit by your Attacks","better":1,"matchers":[{"string":"每個你攻擊擊中的被詛咒敵人，獲得 # 生命"}],"trade":{"ids":{"explicit":["explicit.stat_3072303874"]}}}
 {"ref":"# Life gained for each Enemy Hit if you have used a Vaal Skill Recently","better":1,"matchers":[{"string":"若你近期有使用瓦爾技能，擊中每個敵人回復 # 生命"}],"trade":{"ids":{"explicit":["explicit.stat_3285021988"]}}}
-{"ref":"# Life Regenerated per Second","better":1,"matchers":[{"string":"# 每秒生命回復"}],"trade":{"ids":{"pseudo":["pseudo.pseudo_total_life_regen"]}}}
+{"ref":"# Life Regenerated per Second","better":1,"matchers":[{"string":"# 每秒生命回復 "}],"trade":{"ids":{"pseudo":["pseudo.pseudo_total_life_regen"]}}}
 {"ref":"# Life Regenerated per Second while in Blood Stance","better":1,"matchers":[{"string":"血腥姿態時每秒回復 # 生命"}],"trade":{"ids":{"explicit":["explicit.stat_550848224"]}}}
 {"ref":"# Lightning Damage taken per second per Power Charge if\nyour Skills have dealt a Critical Strike Recently","better":1,"matchers":[{"string":"若近期你的技能造成暴擊，\n每秒每顆暴擊球承受 # 閃電傷害"}],"trade":{"ids":{"explicit":["explicit.stat_1964333391"]}}}
 {"ref":"# Mana gained for each Cursed Enemy hit by your Attacks","better":1,"matchers":[{"string":"每個你攻擊擊中被詛咒的敵人，獲得 # 魔力"}],"trade":{"ids":{"explicit":["explicit.stat_2087996552"]}}}
