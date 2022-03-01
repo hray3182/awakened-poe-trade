@@ -1,6 +1,8 @@
 # Awaken Poe Trade 中文測試版
 ## [檔案下載](https://github.com/hray3182/awakened-poe-trade/releases/latest)
 
+## 台服目前不可用，重製詞綴翻譯中
+
 ## 使用方式
 1. alt+ctrl+D 查詢價格
 2. shift+space 開啟設定面版
