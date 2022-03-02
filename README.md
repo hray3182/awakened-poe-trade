@@ -1,29 +1,22 @@
-# ![Awakener's Orb](https://web.poecdn.com/image/Art/2DItems/Currency/TransferOrb.png) Awakened PoE Trade
+# Awaken Poe Trade 中文測試版
+## [檔案下載](https://github.com/hray3182/awakened-poe-trade/releases/latest)
 
-[![](https://user-images.githubusercontent.com/4292308/153364874-dde23599-278c-4350-8d86-dadbc4b978b3.svg)](https://somsubhra.github.io/github-release-stats/?username=SnosMe&repository=awakened-poe-trade)
-[![](https://user-images.githubusercontent.com/4292308/153364769-e4fe1e82-1bbc-46ac-8a3c-f5a98a5667cc.svg)](https://patreon.com/awakened_poe_trade)
-[![](https://user-images.githubusercontent.com/4292308/153364565-7a545d26-e617-4a33-a919-ff90d8feda3d.svg)](https://github.com/SnosMe/awakened-poe-trade/issues/22)
+## 台服目前不可用，重製詞綴翻譯中
+
+## 使用方式
+1. alt+ctrl+D 查詢價格
+2. shift+space 開啟設定面版
+
+## 注意事項
+1. 台服目前尚未測試，不確定是否正常運作
+2. 安裝後請到設定面版，general>選取"zh_TW"，台服則是選擇"zh_TW(GGC)"，設定完需重啟
+3. 有任何詞綴錯誤或是 UI 翻譯有意見，歡迎開 issue 或是 DC 聯絡
+4. 若是發現錯誤，有能力排除也歡迎 push 給我
+
+## 聯絡方式
+### Discord: Ray#9876
 
 
-➡ [Download for Windows & Linux](https://snosme.github.io/awakened-poe-trade/download) ⬅
-
-## Tool showcase
-
-| Gem | Rare | Unique | Currency |
-|-----|------|--------|----------|
-| ![](https://i.imgur.com/LTsH2DZ.png) | ![](https://i.imgur.com/2XL5Wl8.png) | ![](https://i.imgur.com/UTV6prE.png) | ![](https://i.imgur.com/dQ9Sns6.png) |
-
-### Development
-
-Follow instructions similar to CI [.github/workflows/main.yml](https://github.com/SnosMe/awakened-poe-trade/blob/master/.github/workflows/main.yml)
-
-### Acknowledgments
-
-- [vue-cli-plugin-electron-builder](https://github.com/nklayman/vue-cli-plugin-electron-builder)
-- [libuiohook](https://github.com/kwhat/libuiohook)
-- [robotjs](https://github.com/octalmage/robotjs)
-- [RePoE](https://github.com/brather1ng/RePoE)
-- [poeprices.info](https://www.poeprices.info/)
-- [poe.ninja](https://poe.ninja/)
-
-![](https://i.imgur.com/MATqhv7.png)
+## 感謝
+* 感謝雕像提供物品中英文對照表、回答我很多疑問
+* 感謝 PeterSenpai 提供技術支援
