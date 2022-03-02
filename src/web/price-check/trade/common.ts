@@ -51,7 +51,8 @@ export function tradeTag (item: ParsedItem): string | undefined {
 const ENDPOINT_BY_LANG = {
   en: 'www.pathofexile.com',
   ru: 'ru.pathofexile.com',
-  zh_TW: 'www.pathofexile.com'
+  zh_TW: 'www.pathofexile.com',
+  zh_TW_GGC: 'web.poe.garena.tw'
 }
 
 export function getTradeEndpoint (): string {

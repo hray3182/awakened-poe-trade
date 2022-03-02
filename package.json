@@ -1,6 +1,6 @@
 {
   "name": "awakened-poe-trade",
-  "version": "3.17.10004",
+  "version": "3.17.10004.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SnosMe/awakened-poe-trade.git"
+    "url": "https://github.com/hray3182/awakened-poe-trade.git"
   },
   "main": "background.js",
   "dependencies": {
@@ -27,6 +27,7 @@
     "@fortawesome/fontawesome-free": "5.15.x",
     "animate.css": "^4.1.1",
     "apexcharts": "^3.23.1",
+    "cross-env": "^7.0.3",
     "dot-prop": "6.x.x",
     "electron-overlay-window": "3.0.0-beta.1",
     "electron-store": "8.0.x",
