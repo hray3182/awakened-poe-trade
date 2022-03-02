@@ -26,7 +26,7 @@ export default {
   ENERGY_SHIELD: '能量護盾: ',
   TAG_WARD: '保護: ',
   BLOCK_CHANCE: '格擋率: ',
-  CORRUPTED: '已汙染',
+  CORRUPTED: '已汙染的',
   UNIDENTIFIED: '未鑑定',
   ITEM_SUPERIOR: /^精良的 (.*)$/,
   MAP_BLIGHTED: /^凋落的 (.*)$/,
