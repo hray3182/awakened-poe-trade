@@ -423,7 +423,7 @@ export default defineComponent({
     "Energy Shield: #": "能量護盾: #",
     "Ward: #": "保護: #",
     "Block: #%": "格檔: #%",
-    "variant": "вариант",
+    "variant": "種類",
     "corrupted": "已汙染",
     "synthesised": "追憶",
     "eldritch": "異能",
