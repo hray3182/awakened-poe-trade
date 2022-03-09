@@ -78,7 +78,7 @@ export default defineComponent({
   "zh_TW" :{
     "has_outdataed" :"部份詞綴描述已變更，請檢查並更新地圖的危險詞綴。(當你刪除將所有舊版詞綴，此訊息會隱藏)"
   },
-    "zh_TW_GGG" :{
+  "zh_TW_GGG" :{
     "has_outdataed" :"部份詞綴描述已變更，請檢查並更新地圖的危險詞綴。(當你刪除將所有舊版詞綴，此訊息會隱藏)"
   }
 }

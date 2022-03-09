@@ -243,7 +243,6 @@ export function createTradeRequest (filters: ItemFilters, stats: StatFilter[], i
     }
   }
   const { query } = body
-  console.log(query)
   if (filters.trade.chaosPriceThreshold !== 0) {
     prop.set(query.filters, 'trade_filters.filters.price.min', filters.trade.chaosPriceThreshold)
   }
@@ -498,7 +497,7 @@ export async function requestTradeResultList (body: TradeRequest, leagueId: stri
 
     await RateLimiter.waitMulti(RATE_LIMIT_RULES.SEARCH)
 
-    const response = await fetch(`${MainProcess.CORS}https://${getTradeEndpoint()}/api/trade/search/${leagueId}`, {
+    const response = await fetch(`${MainProcess.CORS}https://${getTradeEndpoint()}/api/trade/search/宿敵聯盟`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

@@ -106,7 +106,19 @@ export default defineComponent({
     "Map check": "檢查地圖",
     "Item info": "物品資訊",
     "Stash tab scrolling": "切換倉庫頁",
-    "Delve grid": "Delve grid"
+    "Delve grid": "礦坑網格"
+  },
+  "zh_TW_GGC": {
+    "You can clear hotkey by pressing Backspace": "你可以使用 Backspace(倒退鍵) 來清除快捷鍵。",
+    "Price check": "查詢價格",
+    "Auto-hide Mode": "自動隱藏模式",
+    "Open without auto-hide": "一般模式",
+    "Overlay": "Overlay",
+    "Open item on wiki": "開啟wiki頁面(台服不可用)",
+    "Map check": "檢查地圖",
+    "Item info": "物品資訊",
+    "Stash tab scrolling": "切換倉庫頁",
+    "Delve grid": "礦坑網格"
   }
 }
 </i18n>

@@ -186,6 +186,7 @@ function findInDatabase (item: ParserState) {
   item.infoVariants = info
   // choose 1st variant, correct one will be picked at the end of parsing
   item.info = info[0]
+  console.log(item.info.icon)
   // same for every variant
   if (!item.category) {
     if (item.info.craftable) {
@@ -309,7 +310,6 @@ function parseNamePlate (section: string[]) {
     default:
       return null
   }
-  console.log(item)
   return item
 }
 
