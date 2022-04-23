@@ -83,7 +83,7 @@ export const defaultConfig = (): Config => ({
   hardwareAcceleration: false,
   accountName: '',
   stashScroll: true,
-  language: 'zh_TW',
+  language: 'zh_TW_GGC',
   fontSize: 16,
   disableUpdateDownload: false,
   widgets: [
